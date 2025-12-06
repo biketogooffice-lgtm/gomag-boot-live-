@@ -20,7 +20,11 @@ export default async function handler(req, res) {
 
   try {
     const client = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
-    const userMessage = req.body.message || "Salut, bot!";
+
+    // Folosește mesajul utilizatorului sau default în română
+    const userMessage = req.body.message && req.body.message.trim()
+      ? req.body.message
+      : "Salut! Sunt robotul AI de la IncaltaminteLaModa.ro. Cum te pot ajuta astăzi?";
 
     const response = await client.chat.completions.create({
       model: "gpt-4o-mini",
