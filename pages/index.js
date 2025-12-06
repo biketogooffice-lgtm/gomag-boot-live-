@@ -19,7 +19,7 @@ export default function Home() {
 
   return (
     <div style={{ padding: '2rem', fontFamily:'Arial,sans-serif' }}>
-  <h1>AI IncaltaminteLaModa</h1>
+   <h1>AI IncaltaminteLaModa</h1> 
       <div style={{ border:'1px solid #ccc', borderRadius:'8px', padding:'1rem', height:'300px', overflowY:'auto', background:'#f9f9f9', whiteSpace:'pre-wrap' }}>
         {response}
       </div>
